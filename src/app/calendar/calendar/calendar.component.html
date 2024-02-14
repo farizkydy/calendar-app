@@ -1,0 +1,12 @@
+<div class="calendar">
+    <app-appointment-form (add)="addAppointment($event)"></app-appointment-form>
+    <div class="appointments">
+      <div *ngFor="let appointment of appointments" class="appointment" cdkDrag>
+        <span>{{ appointment.title }}</span>
+        <button mat-icon-button (click)="deleteAppointment(appointment)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  

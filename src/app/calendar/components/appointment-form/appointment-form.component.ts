@@ -42,6 +42,7 @@ export class AppointmentFormComponent {
   addAppointment() {
     if (this.appointmentForm.valid) {
       this.add.emit(this.appointmentForm.value);
+      console.log(this.appointmentForm.value)
       this.appointmentForm.reset();
     }
   }
